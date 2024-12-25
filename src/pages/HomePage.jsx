@@ -6,9 +6,9 @@ const HomePage = () => {
     return (
         <section id='home' className='relative h-screen w-full bg-gradient-to-r from-[#2B2A30] to-[#3f3e46] text-white px-32 pt-24'>
             <div className='flex flex-col justify-center h-full w-[40vw] gap-8 z-30 '>
-                <h1 className='text-5xl uppercase font-extrabold leading-normal tracking-wide font-pop '>
-                    get healthy body <br />with the perfect<br />exercise
-                    <div className='h-[3rem] w-44 inline-block bg-gray-500 rounded-full my-auto ml-4 hover:bg-gray-600 hover:scale-105 duration-200 translate-y-2'></div>
+                <h1 className='uppercase font-extrabold lg:leading-relaxed leading-loose tracking-wide font-pop lg:text-5xl text-3xl'>
+                    Get healthy body with the perfect exercise
+                    <div className='h-[3rem] w-44 inline-block bg-gradient-to-r to-blue-700 from-pink-500 rounded-full my-auto ml-4 hover:bg-blue-600 hover:scale-105 duration-200 translate-y-2'></div>
                 </h1>
                 <p className='font-pop text-sm'>
                     We are always there to help you to make a healthy body and mind through the power of fitness.
