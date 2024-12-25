@@ -51,4 +51,4 @@ To get the project up and running locally, follow these steps:
    This will start the Vite development server. You should be able to view the app at http://localhost:5173/.
 
    ## Screensot
-   ![Fitnesxia website](image-1.png)
+   ![Fitnesxia website](image.png)
