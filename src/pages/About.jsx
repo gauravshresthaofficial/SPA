@@ -2,22 +2,22 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div id='about' className='min-h-screen w-full text-white flex flex-col'>
-            <div className='bg-[#37383C] h-44 w-full flex justify-between px-32 shadow-lg'>
-                <div className='flex justify-center flex-col gap-4'>
-                    <h2 className='text-4xl  font-extrabold'>970+ More</h2>
+        <div id='about' className='flex flex-col w-full min-h-screen text-white'>
+            <div className='flex justify-between bg-[#37383C] shadow-lg px-32 w-full h-44'>
+                <div className='flex flex-col justify-center gap-4'>
+                    <h2 className='font-extrabold text-4xl'>970+ More</h2>
                     <p className=''>Trusted Company Partners</p>
                 </div>
                 <div className='flex items-center gap-10'>
-                    <img src="src/assets/videoask.svg" alt="" className='h-8 w-auto' />
-                    <img src="src/assets/hubspot.svg" alt="" className='h-8 w-auto' />
-                    <img src="src/assets/mapbox.svg" alt="" className='h-8 w-auto' />
+                    <img src="src/assets/videoask.webp" alt="" className='w-auto h-8' />
+                    <img src="src/assets/hubspot.webp" alt="" className='w-auto h-8' />
+                    <img src="src/assets/mapbox.webp" alt="" className='w-auto h-8' />
                 </div>
             </div>
-            <div className='grow bg-[#3A3B3F] w-full grid grid-cols-2 p-32 gap-12'>
-                <img src="src/assets/lady.png" alt="" />
-                <div className="flex flex-col gap-4 justify-center font-pop">
-                    <h2 className='capitalize text-4xl font-bold leading-normal'>Get ready to reach<br />your fitness goal</h2>
+            <div className='gap-12 grid grid-cols-2 bg-[#3A3B3F] p-32 w-full grow'>
+                <img src="src/assets/lady.webp" alt="" />
+                <div className="flex flex-col justify-center gap-4 font-pop">
+                    <h2 className='font-bold text-4xl capitalize leading-normal'>Get ready to reach<br />your fitness goal</h2>
                     <p className='text-sm leading-relaxed'>We are a gym that is committed to helping people
                         reach their fitness goals. We offer a variety of theirs
                         programs and services to fit your needs, whether
@@ -26,7 +26,7 @@ const About = () => {
                     <p className='text-sm leading-relaxed'>
                         We believe that everyone should have access to
                         the benefits of exercise make it happen.</p>
-                    <button className='text-white bg-primary px-6 h-12 rounded-lg duration-200 hover:opacity-70 cursor-pointer transition-colors w-fit text-sm mt-6'>Free Trail Today</button>
+                    <button className='bg-primary hover:opacity-70 mt-6 px-6 rounded-lg w-fit h-12 text-sm text-white transition-colors duration-200 cursor-pointer'>Free Trail Today</button>
                 </div>
 
             </div>

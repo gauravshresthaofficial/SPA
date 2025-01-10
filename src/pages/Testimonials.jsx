@@ -46,40 +46,40 @@ const Testimonials = () => {
     };
 
     return (
-        <div id='testimonials' className='relative w-full text-white bg-[#37383c] flex flex-col gap-12 justify-center items-center px-32 py-24 font-pop'>
+        <div id='testimonials' className='relative flex flex-col justify-center items-center gap-12 bg-[#37383c] px-32 py-24 w-full font-pop text-white'>
 
-            <div className='flex gap-24 items-center justify-center w-full'>
-                <div className='flex flex-col items-start text-left gap-6 w-3/5'>
-                    <h2 className='text-4xl font-bold leading-snug'>What Our Happy Clients Say About Us</h2>
-                    <p className='text-sm w-2/3'>
+            <div className='flex justify-center items-center gap-24 w-full'>
+                <div className='flex flex-col items-start gap-6 w-3/5 text-left'>
+                    <h2 className='font-bold text-4xl leading-snug'>What Our Happy Clients Say About Us</h2>
+                    <p className='w-2/3 text-sm'>
                         I’ve been a member of Fitness Within for about 6 months now and I absolutely love it!
                         The trainers are so motivated and they really help to reach fitness goals.
                     </p>
-                    <div className='flex gap-6 items-center'>
+                    <div className='flex items-center gap-6'>
                         <div className='flex items-center gap-2'>
                             <div className='flex -space-x-2'>
-                                <img src={img1} alt='Client 1' className='w-10 h-10 rounded-full object-cover bg-center border-2 border-gray-500' />
-                                <img src={img2} alt='Client 2' className='w-10 h-10 rounded-full object-cover bg-center border-2 border-gray-500' />
-                                <img src={img1} alt='Client 3' className='w-10 h-10 rounded-full object-cover bg-center border-2 border-gray-500' />
-                                <img src={img2} alt='Client 4' className='w-10 h-10 rounded-full object-cover bg-center border-2 border-gray-500' />
+                                <img src={img1} alt='Client 1' className='border-2 border-gray-500 bg-center rounded-full w-10 h-10 object-cover' />
+                                <img src={img2} alt='Client 2' className='border-2 border-gray-500 bg-center rounded-full w-10 h-10 object-cover' />
+                                <img src={img1} alt='Client 3' className='border-2 border-gray-500 bg-center rounded-full w-10 h-10 object-cover' />
+                                <img src={img2} alt='Client 4' className='border-2 border-gray-500 bg-center rounded-full w-10 h-10 object-cover' />
                             </div>
-                            <button className='w-10 h-10 flex justify-center items-center bg-[#FF4D4F] text-white rounded-full text-xl'>
+                            <button className='flex justify-center items-center bg-[#FF4D4F] rounded-full w-10 h-10 text-white text-xl'>
                                 +
                             </button>
                         </div>
                         <div className='flex items-center gap-3 text-yellow-400'>
-                            <IoIosStar className='h-5 w-auto'></IoIosStar>
+                            <IoIosStar className='w-auto h-5'></IoIosStar>
                             <p>4.9 (450 Reviews)</p>
                         </div>
                     </div>
                 </div>
 
-                <div className='relative bg-[#2e2f33] p-6 rounded-lg shadow-lg w-2/5'>
+                <div className='relative bg-[#2e2f33] shadow-lg p-6 rounded-lg w-2/5'>
                     <div className='flex items-center gap-4 mb-4'>
-                        <img src={testimonials[currentIndex].profileImg} alt={testimonials[currentIndex].name} className='w-12 h-12 object-cover bg-center rounded-full border-2 border-gray-500' />
+                        <img src={testimonials[currentIndex].profileImg} alt={testimonials[currentIndex].name} className='border-2 border-gray-500 bg-center rounded-full w-12 h-12 object-cover' />
                         <div>
-                            <h3 className='text-xl font-semibold'>{testimonials[currentIndex].name}</h3>
-                            <p className='text-sm text-gray-400'>{testimonials[currentIndex].role}</p>
+                            <h3 className='font-semibold text-xl'>{testimonials[currentIndex].name}</h3>
+                            <p className='text-gray-400 text-sm'>{testimonials[currentIndex].role}</p>
                         </div>
                     </div>
                     <div className='flex items-center mb-4 text-yellow-400'>
@@ -91,29 +91,29 @@ const Testimonials = () => {
                         {testimonials[currentIndex].text}
                     </p>
                     {/* Navigation Buttons */}
-                    <div className='absolute top-1/2 -left-6 transform -translate-y-1/2'>
+                    <div className='top-1/2 -left-6 absolute transform -translate-y-1/2'>
                         <FaArrowLeft
                             onClick={handlePrev}
-                            className='w-10 h-10 p-3 hover:scale-105 cursor-pointer flex justify-center items-center bg-white text-black rounded-full text-lg shadow-lg'>
+                            className='flex justify-center items-center bg-white shadow-lg p-3 rounded-full w-10 h-10 text-black text-lg cursor-pointer hover:scale-105'>
 
                         </FaArrowLeft>
                     </div>
-                    <div className='absolute top-1/2 -right-6 transform -translate-y-1/2'>
+                    <div className='top-1/2 -right-6 absolute transform -translate-y-1/2'>
                         <FaArrowRight
                             onClick={handleNext}
-                            className='w-10 h-10 p-3 hover:scale-105 cursor-pointer flex justify-center items-center bg-[#FF4D4F] text-white rounded-full text-lg shadow-lg'>
+                            className='flex justify-center items-center bg-[#FF4D4F] shadow-lg p-3 rounded-full w-10 h-10 text-lg text-white cursor-pointer hover:scale-105'>
                             →
                         </FaArrowRight>
                     </div>
                 </div>
             </div>
 
-            <div className='flex gap-2 items-center text-gray-400 w-full'>
-                <IoIosStar className='h-6 w-auto'></IoIosStar>
-                <h2 className='text-2xl font-medium'>TrustPilot</h2>
+            <div className='flex items-center gap-2 w-full text-gray-400'>
+                <IoIosStar className='w-auto h-6'></IoIosStar>
+                <h2 className='font-medium text-2xl'>TrustPilot</h2>
             </div>
 
-            <img src="src/assets/arrrow.png" alt="" className='absolute bottom-24 h-16 w-auto'/>
+            <img src="src/assets/arrrow.webp" alt="" className='bottom-24 absolute w-auto h-16'/>
         </div>
     );
 };

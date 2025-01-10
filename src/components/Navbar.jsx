@@ -52,11 +52,11 @@ const Navbar = () => {
         } ${isScrolled ? "bg-grayDark shadow-lg" : "bg-transparent"}`}
     >
       <div className="flex items-center gap-4 cursor-pointer">
-        <img src="src/assets/Logo.png" alt="Logo" className="h-5 w-auto" />
-        <h1 className="text-xl font-extrabold uppercase">Fitnesxia</h1>
+        <img src="src/assets/Logo.webp" alt="Logo" className="w-auto h-5" />
+        <h1 className="font-extrabold text-xl uppercase">Fitnesxia</h1>
       </div>
 
-      <div className="flex gap-8 items-center">
+      <div className="flex items-center gap-8">
         <NavItem to="home" label="Home" activeClass="text-red-500" />
         <NavItem to="about" label="About" activeClass="text-red-500" />
         <NavItem to="program" label="Program" activeClass="text-red-500" />
@@ -65,7 +65,7 @@ const Navbar = () => {
         <NavItem
           to="signup"
           label="Sign Up"
-          className="bg-primary px-6 py-2 rounded-lg duration-200 hover:opacity-70"
+          className="bg-primary hover:opacity-70 px-6 py-2 rounded-lg hover:text-white duration-200"
           extraStyles="ml-4"
           activeClass="text-white"
         />
