@@ -1,10 +1,13 @@
-# SPA (Single Page Application)
+# Fitnesxia - Gym Fitness Website
 
-A modern web application built using React with Tailwind CSS.
+Fitnesxia is a sleek Single Page Application (SPA) built using React and Tailwind CSS, this app delivers a modern, seamless, and responsive user experience.
 
-## Project Setup
+## Tech Stack
 
-This project demonstrates a fast and efficient development workflow using Vite and React, with styling powered by Tailwind CSS.
+- **Vite**: For fast development and build tooling.
+- **React.js**: For building the user interface.
+- **Tailwind CSS**: For styling.
+
 
 ## Prerequisites
 
@@ -49,6 +52,9 @@ To get the project up and running locally, follow these steps:
    ```
 
    This will start the Vite development server. You should be able to view the app at http://localhost:5173/.
-
+   
    ## Screenshot
    ![Fitnesxia website](image.png)
+
+   ## Live View
+   Experience the live app: https://spa-alpha-roan.vercel.app/
