@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { IoIosStar } from 'react-icons/io';
+import arrrow from '/src/assets/arrrow.webp'
 
 const Testimonials = () => {
     const testimonials = [
@@ -113,7 +114,7 @@ const Testimonials = () => {
                 <h2 className='font-medium text-2xl'>TrustPilot</h2>
             </div>
 
-            <img src="src/assets/arrrow.webp" alt="" className='bottom-24 absolute w-auto h-16'/>
+            <img src={arrrow} alt="" className='bottom-24 absolute w-auto h-16'/>
         </div>
     );
 };

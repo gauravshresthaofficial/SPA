@@ -1,4 +1,8 @@
 import React from 'react'
+import videoask from '/src/assets/videoask.webp';
+import hubspot from '/src/assets/hubspot.webp';
+import mapbox from '/src/assets/mapbox.webp';
+import lady from '/src/assets/lady.webp'
 
 const About = () => {
     return (
@@ -9,13 +13,13 @@ const About = () => {
                     <p className=''>Trusted Company Partners</p>
                 </div>
                 <div className='flex items-center gap-10'>
-                    <img src="src/assets/videoask.webp" alt="" className='w-auto h-8' />
-                    <img src="src/assets/hubspot.webp" alt="" className='w-auto h-8' />
-                    <img src="src/assets/mapbox.webp" alt="" className='w-auto h-8' />
+                    <img src={videoask} alt="" className='w-auto h-8' />
+                    <img src={hubspot} alt="" className='w-auto h-8' />
+                    <img src={mapbox} alt="" className='w-auto h-8' />
                 </div>
             </div>
             <div className='gap-12 grid grid-cols-2 bg-[#3A3B3F] p-32 w-full grow'>
-                <img src="src/assets/lady.webp" alt="" />
+                <img src={lady} alt="" />
                 <div className="flex flex-col justify-center gap-4 font-pop">
                     <h2 className='font-bold text-4xl capitalize leading-normal'>Get ready to reach<br />your fitness goal</h2>
                     <p className='text-sm leading-relaxed'>We are a gym that is committed to helping people

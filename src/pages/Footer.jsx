@@ -3,6 +3,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall, IoSend } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
+import Logo from '/src/assets/Logo.webp'
 
 const Footer = () => {
     const sections = [
@@ -100,7 +101,7 @@ const Footer = () => {
             <div className="border-gray-600 mt-8 py-8 border-t">
                 <div className="flex md:flex-row flex-col justify-between items-center mx-auto px-8 lg:px-24 text-gray-400 text-sm container">
                     <div className="flex items-center space-x-2">
-                        <img src="src/assets/logo.webp" alt="Logo" className="h-6" />
+                        <img src={Logo} alt="Logo" className="h-6" />
                         <span className="font-extrabold text-white text-xl uppercase">FITNESXIA</span>
                     </div>
                     <p>©2023 DesignAxen. All Rights Reserved.</p>

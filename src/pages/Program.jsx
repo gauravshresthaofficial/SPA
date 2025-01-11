@@ -3,6 +3,7 @@ import { FaDumbbell } from 'react-icons/fa';
 import { GiMuscleUp } from 'react-icons/gi';
 import { GrRun, GrYoga } from 'react-icons/gr';
 import { ImCheckboxChecked } from 'react-icons/im';
+import bpm from '/src/assets/bpm.webp'
 
 const programData = [
     {
@@ -93,7 +94,7 @@ const Program = () => {
                     ))}
                     <button className='bg-primary hover:opacity-70 mt-6 px-6 rounded-lg w-fit h-12 text-sm text-white transition-colors duration-200 cursor-pointer'>Join Today</button>
                 </div>
-                <img src="src/assets/bpm.webp" alt="" className='w-auto h-full' />
+                <img src={bpm} alt="" className='w-auto h-full' />
             </div>
         </>
     );

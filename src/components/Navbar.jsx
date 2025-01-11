@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import Logo from '/src/assets/Logo.webp'
 
 const NavItem = ({ to, label, activeClass = "text-[#ef2230]", className = "", extraStyles = "" }) => {
   return (
@@ -52,7 +53,7 @@ const Navbar = () => {
         } ${isScrolled ? "bg-grayDark shadow-lg" : "bg-transparent"}`}
     >
       <div className="flex items-center gap-4 cursor-pointer">
-        <img src="src/assets/Logo.webp" alt="Logo" className="w-auto h-5" />
+        <img src={Logo} alt="Logo" className="w-auto h-5" />
         <h1 className="font-extrabold text-xl uppercase">Fitnesxia</h1>
       </div>
 

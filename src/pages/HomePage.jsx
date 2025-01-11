@@ -1,6 +1,7 @@
 import React from 'react'
 import { CgGym } from 'react-icons/cg'
 import { FaPlay } from 'react-icons/fa'
+import LandingImage from '/src/assets/LandingImage.webp'
 
 const HomePage = () => {
     return (
@@ -41,7 +42,7 @@ const HomePage = () => {
 
             <CgGym className='top-36 left-1/2 absolute opacity-15 w-auto h-20' />
 
-            <img src="/src/assets/file.webp" alt="" className='right-10 bottom-0 absolute w-auto h-[90vh]' />
+            <img src={LandingImage} alt="" className='right-10 bottom-0 absolute w-auto h-[90vh]' />
 
         </section>
     )
