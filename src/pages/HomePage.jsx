@@ -3,7 +3,7 @@ import { CgGym } from 'react-icons/cg'
 import { FaPlay } from 'react-icons/fa'
 import LandingImage from '/src/assets/LandingImage.webp'
 import { motion } from 'motion/react'
-import { animate, delay } from 'motion'
+import { animate, delay, easeIn } from 'motion'
 
 const HomePage = () => {
     const containerVariants = {
@@ -28,10 +28,23 @@ const HomePage = () => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.4
+                duration: 0.4,
+                staggerChildren: 0.2,
             }
         }
     };
+
+    const staggerVariants = {
+        hidden: {
+            y: 40
+        },
+        show: {
+            y: 0,
+            transition: {
+                ease: "easeOut"
+            }
+        }
+    }
     return (
         <section id='home' className='relative bg-gradient-to-r from-[#2B2A30] to-[#3f3e46] px-32 pt-24 w-full h-screen text-white overflow-hidden'>
             <motion.div
@@ -69,23 +82,35 @@ const HomePage = () => {
                     className='flex gap-4 divide-x-2 divide-gray-500'
                     variants={fadeInVariants}
                 >
-                    <div className='space-y-2'>
+                    <motion.div className='space-y-2'
+                        variants={staggerVariants}
+                    >
                         <h2 className='font-extrabold text-3xl'>105+</h2>
                         <p className='text-sm'>Experts Trainers</p>
-                    </div>
-                    <div className='space-y-2 pl-4'>
+                    </motion.div>
+                    <motion.div className='space-y-2 pl-4'
+                        variants={staggerVariants}
+                    >
                         <h2 className='font-extrabold text-3xl'>105+</h2>
                         <p className='text-sm'>Experts Trainers</p>
-                    </div>
-                    <div className='space-y-2 pl-4'>
+                    </motion.div>
+                    <motion.div className='space-y-2 pl-4'
+                        variants={staggerVariants}
+                    >
                         <h2 className='font-extrabold text-3xl'>105+</h2>
                         <p className='text-sm'>Experts Trainers</p>
-                    </div>
+                    </motion.div>
 
                 </motion.div>
             </motion.div>
 
-            <CgGym className='top-36 left-1/2 absolute opacity-15 w-auto h-20' />
+            <motion.div className='top-36 left-1/2 absolute '
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2 }}
+            >
+                <CgGym className="w-auto h-20 opacity-15 " />
+            </motion.div>
 
             <motion.img src={LandingImage} alt="" className='right-10 bottom-0 absolute w-auto h-[90vh]'
                 initial={{ opacity: 0, y: "100%" }}

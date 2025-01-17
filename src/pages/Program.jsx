@@ -5,7 +5,7 @@ import { GrRun, GrYoga } from 'react-icons/gr';
 import { ImCheckboxChecked } from 'react-icons/im';
 import bpm from '/src/assets/bpm.webp'
 import { motion } from 'motion/react';
-import { spring } from 'motion';
+import { spring, transform } from 'motion';
 
 const programData = [
     {
@@ -70,9 +70,23 @@ const Program = () => {
             transition: { duration: 0.2, type: "spring" }
         }
     }
+
+    const servicestagger = {
+        initial: {
+            opacity: 0,
+            y: 400
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3
+            }
+        }
+    }
     return (
         <>
-            <div id="program" className="flex flex-col justify-center items-center gap-12 bg-[#37383C] p-32 w-full font-pop text-white">
+            <div id="program" className="flex flex-col justify-center overflow-hidden items-center gap-12 bg-[#37383C] p-32 w-full font-pop text-white">
                 <div className="items-center gap-56 grid grid-cols-2">
                     <motion.h2
                         className="font-bold text-4xl capitalize leading-normal"
@@ -126,13 +140,28 @@ const Program = () => {
                     ))}
                 </motion.div>
             </div>
-            <div className='gap-12 grid grid-cols-2 bg-[#3A3B3F] p-32 max-h-screen font-pop text-white'>
-                <div className='flex flex-col justify-center items-start gap-6 pr-12'>
-                    <h2 className="font-bold text-4xl capitalize leading-normal">
+            <div className='gap-12 grid grid-cols-2 bg-[#3A3B3F] overflow-hidden px-32 py-12 max-h-screen font-pop text-white'>
+                <motion.div
+                    className='flex flex-col justify-center items-start gap-6 pr-12'
+                    initial="initial"
+                    whileInView="show"
+                    transition={{
+                        staggerChildren: 0.3
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
+
+                >
+                    <motion.h2
+                        className="font-bold text-4xl capitalize leading-normal"
+                        variants={servicestagger}
+                    >
                         Why should people choose Fitnesxia services
-                    </h2>
+                    </motion.h2>
                     {sercicesData.map((service) => (
-                        <div className='space-y-2' key={service.id}>
+                        <motion.div
+                            className='space-y-2' key={service.id}
+                            variants={servicestagger}
+                        >
                             <div className='flex items-center gap-2' key={service.id}>
                                 <ImCheckboxChecked className='inline-block mr-2 rounded-full w-auto h-full text-secondary' />
                                 <h2 className="font-bold text-xl">{service.title}</h2>
@@ -140,11 +169,23 @@ const Program = () => {
                             <p className="text-sm leading-relaxed">
                                 {service.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
-                    <button className='bg-primary hover:opacity-70 mt-6 px-6 rounded-lg w-fit h-12 text-sm text-white transition-colors duration-200 cursor-pointer'>Join Today</button>
-                </div>
-                <img src={bpm} alt="" className='w-auto h-full' />
+                    <motion.button
+                        className='bg-primary hover:opacity-70 mt-6 px-6 rounded-lg w-fit h-12 text-sm text-white transition-colors duration-200 cursor-pointer'
+                        variants={servicestagger}
+                    >
+                        Join Today
+                    </motion.button>
+                </motion.div>
+                <motion.img
+                    src={bpm} alt=""
+                    className='w-auto h-full'
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: .5 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                />
             </div>
         </>
     );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { IoIosStar } from 'react-icons/io';
 import arrrow from '/src/assets/arrrow.webp'
+import { motion } from 'motion/react';
 
 const Testimonials = () => {
     const testimonials = [
@@ -46,17 +47,36 @@ const Testimonials = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
     };
 
+    const staggerVariants = {
+        initial: {
+            opacity: 0.1,
+            y: 100,
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.2, }
+        }
+    }
+
     return (
         <div id='testimonials' className='relative flex flex-col justify-center items-center gap-12 bg-[#37383c] px-32 py-24 w-full font-pop text-white'>
 
-            <div className='flex justify-center items-center gap-24 w-full'>
-                <div className='flex flex-col items-start gap-6 w-3/5 text-left'>
-                    <h2 className='font-bold text-4xl leading-snug'>What Our Happy Clients Say About Us</h2>
-                    <p className='w-2/3 text-sm'>
+            <div className='flex justify-center items-center gap-24 w-full '>
+                <motion.div
+                    className='flex flex-col items-start gap-6 w-3/5 text-left overflow-hidden'
+                    initial="initial"
+                    whileInView="show"
+                    transition={{
+                        delay: 0.4, staggerChildren: 0.3
+                    }}
+                >
+                    <motion.h2 variants={staggerVariants} className='font-bold text-4xl leading-snug'>What Our Happy Clients Say About Us</motion.h2>
+                    <motion.p variants={staggerVariants} className='w-2/3 text-sm'>
                         I’ve been a member of Fitness Within for about 6 months now and I absolutely love it!
                         The trainers are so motivated and they really help to reach fitness goals.
-                    </p>
-                    <div className='flex items-center gap-6'>
+                    </motion.p>
+                    <motion.div variants={staggerVariants} className='flex items-center gap-6'>
                         <div className='flex items-center gap-2'>
                             <div className='flex -space-x-2'>
                                 <img src={img1} alt='Client 1' className='border-2 border-gray-500 bg-center rounded-full w-10 h-10 object-cover' />
@@ -72,10 +92,16 @@ const Testimonials = () => {
                             <IoIosStar className='w-auto h-5'></IoIosStar>
                             <p>4.9 (450 Reviews)</p>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
-                <div className='relative bg-[#2e2f33] shadow-lg p-6 rounded-lg w-2/5'>
+                <motion.div
+                    className='relative bg-[#2e2f33] shadow-lg p-6 rounded-lg w-2/5'
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    viewport={{ amount: 0.5 }}
+                >
                     <div className='flex items-center gap-4 mb-4'>
                         <img src={testimonials[currentIndex].profileImg} alt={testimonials[currentIndex].name} className='border-2 border-gray-500 bg-center rounded-full w-12 h-12 object-cover' />
                         <div>
@@ -106,7 +132,7 @@ const Testimonials = () => {
                             →
                         </FaArrowRight>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className='flex items-center gap-2 w-full text-gray-400'>
@@ -114,7 +140,7 @@ const Testimonials = () => {
                 <h2 className='font-medium text-2xl'>TrustPilot</h2>
             </div>
 
-            <img src={arrrow} alt="" className='bottom-24 absolute w-auto h-16'/>
+            <img src={arrrow} alt="" className='bottom-24 absolute w-auto h-16' />
         </div>
     );
 };
