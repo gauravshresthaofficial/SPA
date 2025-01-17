@@ -1,6 +1,6 @@
 # Fitnesxia - Gym Fitness Website
 
-Fitnesxia is a sleek Single Page Application (SPA) built using React and Tailwind CSS, this app delivers a modern, seamless, and responsive user experience.
+Fitnesxia is a sleek Single Page Application (SPA) built using React and Tailwind CSS.
 
 ## Tech Stack
 
