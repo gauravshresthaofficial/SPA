@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { GiCheckMark } from 'react-icons/gi';
 
@@ -100,15 +101,15 @@ const Membership = () => {
     };
 
     return (
-        <div id='membership' className='min-h-screen w-full text-white bg-[#37383c] flex flex-col gap-8 justify-center items-center px-32 py-24 font-pop'>
-            <h2 className="capitalize text-4xl font-bold leading-normal">
+        <div id='membership' className='flex flex-col justify-center items-center gap-8 bg-[#37383c] px-32 py-24 w-full min-h-screen font-pop text-white'>
+            <h2 className="font-bold text-4xl capitalize leading-normal">
                 Choose the best plan.
             </h2>
             <p className="text-sm leading-loose">
                 Choose the plan that's right for your growing team. Simple pricing & no hidden charges.
             </p>
 
-            <div className="flex justify-center rounded-full bg-gray-800 border-red-600 border">
+            <div className="flex justify-center bg-gray-800 border border-red-600 rounded-full">
                 <button
                     className={`px-6 py-2 text-white rounded-full outline-none duration-200 ${activePlan === "monthly" ? "bg-red-600" : "bg-gray-800"}`}
                     onClick={() => setActivePlan("monthly")}
@@ -123,16 +124,16 @@ const Membership = () => {
                 </button>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 w-full">
+            <div className="gap-8 grid md:grid-cols-3 w-full">
                 {plans.map((plan) => (
                     <div
                         key={plan.id}
                         className={`rounded-lg p-8 bg-[#464646] hover:bg-secondary shadow-md hover:scale-105 transition-transform duration-200`}
                     >
-                        <h3 className="text-sm uppercase text-center mb-4">
+                        <h3 className="mb-4 text-center text-sm uppercase">
                             {plan.name}
                         </h3>
-                        <p className="text-4xl font-bold text-center mb-6">{plan.price} <span className='text-sm font-normal'>/ per {activePlan}</span></p>
+                        <p className="mb-6 font-bold text-4xl text-center">{plan.price} <span className='font-normal text-sm'>/ per {activePlan}</span></p>
                         <ul className="space-y-4 mb-6">
                             {plan.features.map((feature, index) => (
                                 <li
@@ -144,7 +145,7 @@ const Membership = () => {
                                 </li>
                             ))}
                         </ul>
-                        <button className="block w-full mt-8 bg-transparent border border-white py-2 rounded-full text-center text-white hover:bg-white hover:text-black transition-colors"
+                        <button className="block border-white bg-transparent hover:bg-white mt-8 py-2 border rounded-full w-full text-center text-white hover:text-black transition-colors"
                             onClick={() => handlePlanSelection(plan)}
                         >
                             {plan.button}
