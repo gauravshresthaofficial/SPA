@@ -67,6 +67,7 @@ const Testimonials = () => {
                     className='flex flex-col items-start gap-6 w-3/5 text-left overflow-hidden'
                     initial="initial"
                     whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{
                         delay: 0.4, staggerChildren: 0.3
                     }}
@@ -100,7 +101,7 @@ const Testimonials = () => {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    viewport={{ amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.5 }}
                 >
                     <div className='flex items-center gap-4 mb-4'>
                         <img src={testimonials[currentIndex].profileImg} alt={testimonials[currentIndex].name} className='border-2 border-gray-500 bg-center rounded-full w-12 h-12 object-cover' />
